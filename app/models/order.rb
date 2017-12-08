@@ -1,6 +1,8 @@
 class Order < ApplicationRecord
+  belongs_to :account
   has_many :order_items
-  belongs_to :user, optional: true
+  before_save :update_total
+  before_create :finalize
 
   before_save :calculate_total
 
@@ -8,9 +10,15 @@ class Order < ApplicationRecord
     self.total_price = order_items.collect { |item| item.product.price * item.quantity }.sum
   end
 
-  def finalize(user)
-    self.user_id = user.id
-    self.status = 2
-    self.save
+  ## May need to come back to this.
+  def finalize
+    if self.status == 1
+      self.status = 2
+      self.save
+    end
+  end
+
+  def update_total
+    self.total_price = calculate_total
   end
 end
