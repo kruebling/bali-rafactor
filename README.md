@@ -13,6 +13,8 @@ To set up:
 
   2. Change migrations, update gems, refactor models.
 
+  3. Refactor controllers, adjust methods for tracking order status. Change log in form to only accept password and no password confirmation, come back to fix this and encrypt password later.
+
 # AJAX Checklist
 
 - [ ] Users should be able to add products to their shopping cart from the index page with AJAX. The item should be added to the shopping cart and the number of items in the cart (shown in the navbar) should update.
