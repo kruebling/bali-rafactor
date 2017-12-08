@@ -36,6 +36,8 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'materialize-sass'
 # Rails admin
 gem 'rails_admin'
+# faker
+gem 'faker'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
