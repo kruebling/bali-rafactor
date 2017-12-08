@@ -6,4 +6,7 @@ To set up:
 
 * `rake db:setup`
 
-* Sorry, didn't get around to tests. It mostly works. There might be a few bugs.
+* Sorry, didn't get around to tests. It mostly works. There might be a few bugs
+
+# Log
+  1. Project worked fine at home, cat chewed through laptop charger, had to catch bus to school (10:00)
