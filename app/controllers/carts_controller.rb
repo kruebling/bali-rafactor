@@ -2,10 +2,11 @@ class CartsController < ApplicationController
 
   def show
     if current_user
-      @previous_orders = current_user.previous_orders
+      @order_items = current_order.order_items.sort
     end
-    @order_items = current_order.order_items
-  end
+  ## TODO: Come back to adjust??
+  #   @order_items = current_order.order_items.sort
+  # end
 
   def finalize
     if current_user

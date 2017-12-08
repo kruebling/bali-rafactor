@@ -11,9 +11,11 @@ To set up:
 # Log
   1. Project worked fine at home, cat chewed through laptop charger, had to catch bus to school (10:00)
 
-  2. Change migrations, update gems, refactor models.
+  2. Change migrations, update gems, refactor models. (10:30)
 
-  3. Refactor controllers, adjust methods for tracking order status. Change log in form to only accept password and no password confirmation, come back to fix this and encrypt password later.
+  3. Refactor controllers, adjust methods for tracking order status. Change log in form to only accept password and no password confirmation, come back to fix this and encrypt password later. (11:00)
+
+  4. Fix bug on user creation to associate a user with an account. If User.save associate that user with a new instance of Account.(11:30)
 
 # AJAX Checklist
 
