@@ -24,9 +24,15 @@
   </nav>
 
   <body>
-    <% flash.each do |name, msg| %>
-      <%= content_tag :div, msg, id: "flash_#{name}" %>
-    <% end %>
+    <div class='container'>
+      <% flash.each do |key, value| %>
+        <div class='alert alert-info alert-dismissible fade show' role='alert'>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <li aria-hidden="true">&times;</li>
+          </button>
+          <%= value %>
+        </div>
+      <% end %>
     <div class="container">
       <%= yield %>
     </div>

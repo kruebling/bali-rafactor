@@ -2,7 +2,7 @@ class Order < ApplicationRecord
   belongs_to :account
   has_many :order_items
   before_save :update_total
-  before_create :finalize
+  before_create :update_status
 
   before_save :calculate_total
 
@@ -11,7 +11,7 @@ class Order < ApplicationRecord
   end
 
   ## TODO: May need to come back to this.
-  def finalize
+  def update_status
     if self.status == 1
       self.status = 2
       self.save

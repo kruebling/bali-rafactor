@@ -9,7 +9,7 @@ class CartsController < ApplicationController
 
   def finalize
     if current_user
-      current_order.finalize(current_user)
+      current_order.update(:status => 3)
       session[:order_id] = nil
       redirect_to cart_path
     else
