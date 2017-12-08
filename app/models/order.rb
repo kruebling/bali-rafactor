@@ -10,7 +10,7 @@ class Order < ApplicationRecord
     self.total_price = order_items.collect { |item| item.product.price * item.quantity }.sum
   end
 
-  ## May need to come back to this.
+  ## TODO: May need to come back to this.
   def finalize
     if self.status == 1
       self.status = 2

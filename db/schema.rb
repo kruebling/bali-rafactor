@@ -10,43 +10,50 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170412212644) do
+ActiveRecord::Schema.define(version: 20171208185534) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "order_items", force: :cascade do |t|
-    t.integer  "quantity"
-    t.integer  "product_id"
-    t.integer  "order_id"
+  create_table "accounts", force: :cascade do |t|
+    t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  create_table "order_items", force: :cascade do |t|
+    t.integer "quantity"
+    t.integer "product_id"
+    t.integer "order_id"
+  end
+
   create_table "orders", force: :cascade do |t|
-    t.string   "total_price"
-    t.string   "decimal"
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
-    t.integer  "user_id"
-    t.integer  "status",      default: 1
+    t.integer "status",      default: 1
+    t.integer "account_id"
+    t.decimal "total_price"
   end
 
   create_table "products", force: :cascade do |t|
     t.string   "name"
-    t.text     "description"
     t.decimal  "price"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.text     "description"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "name"
-    t.string   "email"
-    t.string   "password_digest"
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
-    t.boolean  "admin",           default: false
+    t.string   "email",      default: "",    null: false
+    t.string   "password",   default: "",    null: false
+    t.string   "username",   default: "",    null: false
+    t.string   "first_name", default: "",    null: false
+    t.string   "last_name",  default: "",    null: false
+    t.boolean  "admin",      default: false, null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
 end
