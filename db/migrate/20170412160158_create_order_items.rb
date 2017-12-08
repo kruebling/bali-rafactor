@@ -1,11 +1,9 @@
-class CreateOrderItems < ActiveRecord::Migration[5.0]
+class CreateOrderItems < ActiveRecord::Migration[5.1]
   def change
     create_table :order_items do |t|
-      t.integer :quantity
-      t.integer :product_id
-      t.integer :order_id
-
-      t.timestamps
+      t.column :quantity, :integer
+      t.column :product_id, :integer
+      t.column :order_id, :integer
     end
   end
 end
