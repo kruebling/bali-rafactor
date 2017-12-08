@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_secure_password
   has_one :account
 
   validates :email, :presence => true
@@ -9,5 +10,5 @@ class User < ApplicationRecord
 
   ##TODO: Add password validation once bcrypt gets ironed out.
 
-  
+
 end

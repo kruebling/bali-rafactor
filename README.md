@@ -17,6 +17,10 @@ To set up:
 
   4. Fix bug on user creation to associate a user with an account. If User.save associate that user with a new instance of Account.(11:30)
 
+  5. Fix bug with previous_orders method, instead define previous orders by orders status (12:45)
+
+  5. Fix bug with error in how I set up Bcrypt with DB. Needed a server and DB reset, user login, password confirmation, register working again. (1:30)
+
 # AJAX Checklist
 
 - [ ] Users should be able to add products to their shopping cart from the index page with AJAX. The item should be added to the shopping cart and the number of items in the cart (shown in the navbar) should update.
