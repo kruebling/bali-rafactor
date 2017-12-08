@@ -18,6 +18,12 @@ class Order < ApplicationRecord
     end
   end
 
+  def finalize(user)
+    self.user_id = user.id
+    self.status = 3
+    self.save
+  end
+
   def update_total
     self.total_price = calculate_total
   end
