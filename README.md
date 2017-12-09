@@ -23,11 +23,13 @@ To set up:
 
   6. Bug with order status, losing account ID somewhere along the way, possibly when attempting to set status to 2 (which doesnt work). Needs refactor, cart still works. (2:00)
 
-  7. Had incorrect naming of partials I was trying to render, wasted a lot of time getting AJAX to render product details. Finally got it to render.
+  7. Had incorrect naming of partials I was trying to render, wasted a lot of time getting AJAX to render product details. Finally got it to render.(3:15)
+
+  8. Updating the cart was a lot easier after struggling with the last AJAX request. (4:00)
 
 # AJAX Checklist
 
-- [ ] Users should be able to add products to their shopping cart from the index page with AJAX. The item should be added to the shopping cart and the number of items in the cart (shown in the navbar) should update.
+- [x] Users should be able to add products to their shopping cart from the index page with AJAX. The item should be added to the shopping cart and the number of items in the cart (shown in the navbar) should update.
 
 - [x] Users should be able to click on a product and show/hide the product detail using AJAX. The product detail should include an image (either Paperclip or an image link), the description, and any other fields you choose to add.
 
@@ -39,7 +41,7 @@ To set up:
 - [ ] Add flash messages for signing up, signing in and signing out.
 - [ ] Add product update and delete functionality for admins.
 - [ ] Add admin flash messages for adding, updating and deleting products.
-- [x] Add Paperclip for product image upload.
+- [] Add Paperclip for product image upload.
 - [ ] Allow other than whole dollar amounts for admin product creation
       (for   instance, 3.99).
 - [ ] Add product validations.
