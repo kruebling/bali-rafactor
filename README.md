@@ -19,13 +19,15 @@ To set up:
 
   5. Fix bug with previous_orders method, instead define previous orders by orders status (12:45)
 
-  5. Fix bug with error in how I set up Bcrypt with DB. Needed a server and DB reset, user login, password confirmation, register working again. (1:30)
+  5. Fix bug with error in how I set up Bcrypt with DB. Needed a server restart and DB reset, user login, password confirmation, register working again. (1:30)
 
   6. Bug with order status, losing account ID somewhere along the way, possibly when attempting to set status to 2 (which doesnt work). Needs refactor, cart still works. (2:00)
 
   7. Had incorrect naming of partials I was trying to render, wasted a lot of time getting AJAX to render product details. Finally got it to render.(3:15)
 
   8. Updating the cart was a lot easier after struggling with the last AJAX request. (4:00)
+
+  9. Able to uses AJAX to remove an item from the cart, cart page not updating. Need js to also update cart view. (4:30)
 
 # AJAX Checklist
 
@@ -41,7 +43,7 @@ To set up:
 - [ ] Add flash messages for signing up, signing in and signing out.
 - [ ] Add product update and delete functionality for admins.
 - [ ] Add admin flash messages for adding, updating and deleting products.
-- [] Add Paperclip for product image upload.
+- [ ] Add Paperclip for product image upload.
 - [ ] Allow other than whole dollar amounts for admin product creation
       (for   instance, 3.99).
 - [ ] Add product validations.
