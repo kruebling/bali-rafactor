@@ -25,7 +25,7 @@ class OrderItemsController < ApplicationController
     @order.save
     respond_to do |format|
       format.html { redirect_to cart_path }
-      format.js
+      format.js { render 'carts/destroy'}
     end
   end
 
