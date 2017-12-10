@@ -8,6 +8,7 @@ class UsersController < ApplicationController
     if user.save
       session[:user_id] = user.id
       Account.create(:user_id => user.id)
+      flash[:notice] = 'Thanks for creating an account! Add an Item to your Cart by clicking it below.'
       redirect_to '/'
     else
       redirect_to '/sign_up'
