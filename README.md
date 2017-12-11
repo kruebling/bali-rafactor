@@ -56,7 +56,7 @@ To set up:
 - [ ] Add Stripe so users can pay when finalizing orders.
 - [x] Add password validations to ensure a user's password is
       sufficiently complex.
-- [ ] Add admin links to navbar so admins can easily add, update and delete products.
+- [x] Add admin links to navbar so admins can easily add, update and delete products.
 - [ ] Fix the row height for products, which can quickly become
       uneven, especially when loading product details
 - [ ] Add integration testing for AJAX functionality.
