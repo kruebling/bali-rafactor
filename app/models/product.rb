@@ -4,6 +4,10 @@ class Product < ApplicationRecord
 
   has_many :order_items
 
+  validates :name, :presence => true
+  validates :price, :presence => true
+  validates :description, :presence => true
+
   scope :search, -> (search_parameter) {
     where("name ilike ?", "%#{search_parameter}%")
   }

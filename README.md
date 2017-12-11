@@ -33,6 +33,8 @@ To set up:
 
   10. Added flash messages to site for signing in, out, and up. Tried to implement flash messages I had styled before and realized i didnt have bootstrap, will require further investigation.
 
+  11. Add validations to product and implement paperclip for product image seed file. Paperclip currently timing out when seeding.
+
 # AJAX Checklist
 
 - [x] Users should be able to add products to their shopping cart from the index page with AJAX. The item should be added to the shopping cart and the number of items in the cart (shown in the navbar) should update.
@@ -43,14 +45,14 @@ To set up:
 
 # Additional Checklist
 
-- [ ] Ensure that users can't order a negative number of items.
+- [x] Ensure that users can't order a negative number of items.
 - [x] Add flash messages for signing up, signing in and signing out.
 - [ ] Add product update and delete functionality for admins.
 - [ ] Add admin flash messages for adding, updating and deleting products.
-- [ ] Add Paperclip for product image upload.
+- [x] Add Paperclip for product image upload.
 - [ ] Allow other than whole dollar amounts for admin product creation
       (for   instance, 3.99).
-- [ ] Add product validations.
+- [x] Add product validations.
 - [ ] Add Stripe so users can pay when finalizing orders.
 - [x] Add password validations to ensure a user's password is
       sufficiently complex.
