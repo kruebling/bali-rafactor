@@ -6,6 +6,12 @@
   Last Name: <%= f.text_field :last_name %>
   Username: <%= f.text_field :username %>
   Email: <%= f.text_field :email %>
+  <ul>Password must be...
+    <li>At least 8 characters</li>
+    <li>Contain Uppercase</li>
+    <li>Contain Lowercase</li>
+    <li>Contain a Number</li>
+  </ul>
   Password: <%= f.password_field :password %>
   Password Confirmation: <%= f.password_field :password_confirmation %>
   <span class="waves-effect waves-light btn"><%= f.submit "Sign up" %></span>

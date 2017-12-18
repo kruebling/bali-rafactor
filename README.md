@@ -35,6 +35,8 @@ To set up:
 
   11. Add validations to product and implement paperclip for product image seed file. Paperclip currently timing out when seeding.
 
+  12. Add validations to password so it's protected in terminal and is complex.
+
 # AJAX Checklist
 
 - [x] Users should be able to add products to their shopping cart from the index page with AJAX. The item should be added to the shopping cart and the number of items in the cart (shown in the navbar) should update.

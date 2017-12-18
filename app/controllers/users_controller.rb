@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 
   def new
+    @user = User.new
   end
 
   def create
@@ -12,6 +13,7 @@ class UsersController < ApplicationController
       redirect_to '/'
     else
       redirect_to '/sign_up'
+      flash[:notice] = 'Sign up failed, please check password validation.'
     end
   end
 

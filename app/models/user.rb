@@ -8,7 +8,7 @@ class User < ApplicationRecord
   validates :username, :presence => true
   validates :username, :uniqueness => true
 
-  ##TODO: Add password validation once bcrypt gets ironed out.
+  validates :password, :format => {:with => /^(?=.*[a-zA-Z])(?=.*[0-9]).{8,}$/, :multiline => true}
 
 
 end
